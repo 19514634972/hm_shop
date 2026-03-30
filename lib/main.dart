@@ -6,3 +6,7 @@ void main() {
   runApp(getRootWidget());
  
 }
+
+
+//轮播图插件包
+//flutter pub add carousel_slider

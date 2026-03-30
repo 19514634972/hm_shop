@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:hm_shop/pages/Login/index.dart';
 import 'package:hm_shop/pages/Main/index.dart';
@@ -7,6 +9,15 @@ import 'package:hm_shop/pages/Main/index.dart';
 //返回app根级组件
 Widget getRootWidget() {
   return MaterialApp(
+    // 允许在 Web/桌面端使用鼠标拖拽滚动
+    scrollBehavior: const MaterialScrollBehavior().copyWith(
+      dragDevices: {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+        PointerDeviceKind.trackpad,
+        PointerDeviceKind.stylus,
+      },
+    ),
     //配置命名路由
     initialRoute: "/",
     routes: getRootRoutes(),
